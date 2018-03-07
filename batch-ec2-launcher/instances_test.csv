@@ -1,0 +1,5 @@
+Name,IP,Public IP,VPC,Subnet,Type,OS,EBS,Security Group1,Security Group2,Env,Business,Project,Detail Purpose,IAM Role,Avilability,Cluster Node Type,Begin Time,End Time,Owner1 ,Owner 2,Operation System,BYOL,Database,Stop by Schecule
+SRC018130,10.1.1.66,#N/A,VPC_BJS_PRD_01,Cloud-Private2,t2.medium,MS Win 2008 R2 STD X64,50,test,test2,P,IO,Citrix,Citrix Web Interface 1,#N/A,None,Stand alone,#N/A,#N/A,Like,xxx,Windows,Y,N,N
+SRC018139,10.1.1.68,#N/A,VPC_BJS_PRD_01,Cloud-Private2,t2.medium,MS Win 2008 R2 STD X64,50+10,test,test2,P,IO,Citrix,Citrix Web Interface 1,#N/A,None,Stand alone,#N/A,#N/A,Like,zzz,Windows,Y,N,N
+SRC018140,10.1.0.69,#N/A,VPC_BJS_PRD_01,Cloud-Public,t2.medium,CentOS 7.2 x86_64,50+10,test,test2,P,IO,Citrix,Citrix Web Interface 1,#N/A,None,Stand alone,#N/A,#N/A,Like,yyy,Windows,Y,N,N
+SRC018141,10.1.0.70,#N/A,VPC_BJS_PRD_01,Cloud-Public,t2.medium,MS Win 2008 R2 STD X64,50+10,test,test2,P,IO,Citrix,Citrix Web Interface 1,#N/A,None,Stand alone,#N/A,#N/A,Like,zzz,Windows,Y,N,N
