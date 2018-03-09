@@ -1,6 +1,6 @@
 
-base_ami_id = "ami-cb19c4a6" // Amazon Linux AMI
-#base_ami_id = "ami-ea1ac687" // Windows 2016 AMI
+base_ami_id = "ami-cb19c4a6" ## Amazon Linux AMI
+#base_ami_id = "ami-ea1ac687" ## Windows 2016 AMI
 base_key_pair_name = "launch_template"
 csv_file = "instances_test.csv"
 
