@@ -70,7 +70,7 @@ for instance in data.keys():
     sg1 = data[instance]["Security Group1"]
     sg2 = data[instance]["Security Group2"]
     try:
-        sg1_id = client.describe_security_groups(
+        resp = client.describe_security_groups(
             Filters=[
                 {
                     'Name': 'group-name',
@@ -79,13 +79,18 @@ for instance in data.keys():
                     ]
                 },
             ],
-        )["SecurityGroups"][0]["GroupId"]
+        )["SecurityGroups"]
+        if resp:
+            sg1_id = resp[0]["GroupId"]
+        else:
+            print "security group '%s' - not found..." % sg1_id
+            continue
     except Exception as e:
         traceback.print_exc(file=sys.stdout)
         print "...Failed"
         continue
     try:
-        sg2_id = client.describe_security_groups(
+        resp = client.describe_security_groups(
             Filters=[
                 {
                     'Name': 'group-name',
@@ -94,7 +99,12 @@ for instance in data.keys():
                     ]
                 },
             ],
-        )["SecurityGroups"][0]["GroupId"]
+        )["SecurityGroups"]
+        if resp:
+            sg2_id = resp[0]["GroupId"]
+        else:
+            print "security group '%s' - not found..." % sg2_id
+            continue
     except Exception as e:
         traceback.print_exc(file=sys.stdout)
         print "...Failed"
@@ -137,7 +147,7 @@ for instance in data.keys():
         })
    
     try: 
-        subnet_id = client.describe_subnets(
+        resp = client.describe_subnets(
             Filters=[
                 {
                     'Name': 'tag:Name',
@@ -146,7 +156,12 @@ for instance in data.keys():
                     ]
                 },
             ],
-        )["Subnets"][0]["SubnetId"]
+        )["Subnets"]
+        if resp:
+            subnet_id = resp[0]["SubnetId"]
+        else:
+            print "subnet id '%s' - not found..." % subnet_id
+            continue
     except Exception as e:
         traceback.print_exc(file=sys.stdout)
         print "...Failed"
